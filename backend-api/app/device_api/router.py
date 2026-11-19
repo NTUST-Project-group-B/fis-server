@@ -1,5 +1,4 @@
-"""裝置 API(暫代版本，之後由 A 改寫)。
-
+"""
 流程照圖 4:接收讀值 → 觸發規則評估 → 規則引擎把警報交給通知模組。
 
 和圖 4 的差異(假版本先省略):
@@ -17,7 +16,7 @@ from app.notifier.base import Notifier
 from app.notifier.discord import DiscordWebhookNotifier
 from app.rules_engine.engine import ReadingInput, evaluate_and_notify
 
-router = APIRouter(prefix="/api/v1/device", tags=["裝置 API(暫代)"])
+router = APIRouter(prefix="/api/v1/device", tags=["裝置 API"])
 
 
 def get_notifier() -> Notifier:
